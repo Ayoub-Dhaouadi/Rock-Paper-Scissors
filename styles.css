@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg);
+}
+
+.title {
+    margin: 70px;
+    font-size: 75px;
+    font-weight: bolder;
+}
+
+.subtitle {
+    margin: 5px;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+img {
+    width:200px;
+    height: auto;
+}
+
+.icons{
+    margin: 50px;
+}
+
+.icon {
+    margin: 70px;
+}
+
+.scoreboard {
+    border-radius: 10px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-title {
+    font-weight: bolder;
+}
+
+.computer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.computer-title {
+    font-weight: bolder;
+}
