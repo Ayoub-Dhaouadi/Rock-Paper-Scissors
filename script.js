@@ -5,9 +5,13 @@ const playGame = () => {
     rockBtn = document.querySelector('.rock')
     paperBtn = document.querySelector('.paper')
     scissorsBtn = document.querySelector('.scissors')
+    playerChoices = [rockBtn, paperBtn, scissorsBtn]
 
-    let compChoices = ["rock","paper","scissors"]
-    
+    compChoices = ["rock", "paper", "scissors"]
+
+    const compChoice = () => {
+        return compChoices[(Math.floor(Math.random() * 3))]
+    }
 
     const decideTurnWinner = (playerChoice, compChoice) => {
         if (playerChoice == compChoice) {
@@ -42,3 +46,4 @@ const playGame = () => {
 
 }
 
+playGame()
