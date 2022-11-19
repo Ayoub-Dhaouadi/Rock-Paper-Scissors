@@ -6,11 +6,19 @@ const playGame = () => {
     paperBtn = document.querySelector('.paper')
     scissorsBtn = document.querySelector('.scissors')
     playerChoices = [rockBtn, paperBtn, scissorsBtn]
-
     compChoices = ["rock", "paper", "scissors"]
 
     const compChoice = () => {
         return compChoices[(Math.floor(Math.random() * 3))]
+    }
+
+    const playerChoice = () => {
+        playerChoices.forEach(element => {
+            element.addEventListener('click', (event) => {
+                event.preventDefault()
+                return playerChoices[(element.classList[0])]
+            })
+        });
     }
 
     const decideTurnWinner = (playerChoice, compChoice) => {
@@ -43,6 +51,18 @@ const playGame = () => {
             return { winner: "computer" }
         }
     }
+
+    while (decideGameWinner() == undefined) {
+        pChoice = playerChoice()
+        cChoice = compChoice()
+        addScore(decideTurnWinner(pChoice,cChoice))
+    }
+
+    while (decideGameWinner() != undefined) {
+        title = document.querySelector('.title')
+        title.innerHTML(`The winner is  the ${decideGameWinner()}`)
+        break
+    } 
 
 }
 
